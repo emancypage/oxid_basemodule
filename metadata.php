@@ -19,8 +19,12 @@ $aModule = array(
     'url' => 'https://app-web.pl',
     'email' => 'kontakt@app-web.pl',
     'extend' => array(),
-    'controllers' => array(),
-    'templates' => array(),
+    'controllers' => array(
+        'appweb_first_submenu_cl' => \AppWeb\BaseModule\Controller\Admin\FirstSubmenuController::class,
+    ),
+    'templates' => array(
+        'app-web/oxid_basemodule/views/admin/tpl/appweb_first_submenu.tpl' => 'app-web/oxid_basemodule/views/admin/tpl/appweb_first_submenu.tpl',
+    ),
     'blocks' => array(),
     'events' => array(
         'onActivate' => '\AppWeb\BaseModule\Event\Events::onActivate',

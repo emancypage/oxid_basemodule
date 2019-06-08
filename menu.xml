@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OX>
+    <OXMENU id="NAVIGATION_ESHOPADMIN">
+        <MAINMENU id="AW_MAINMENU_GENERAL">
+            <SUBMENU id="AW_SUBMENU_FIRST" cl="appweb_first_submenu_cl">
+                <TAB id="AW_SUBMENU_FIRST_TAB_MAIN" cl="appweb_first_tab_main" />
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>
