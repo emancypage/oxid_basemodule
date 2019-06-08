@@ -1,0 +1,39 @@
+{
+  "name":        "app-web/oxid_basemodule",
+  "description": "Base module for faster development",
+  "type":        "oxideshop-module",
+  "keywords":    [
+    "oxid",
+    "modules"
+  ],
+  "homepage":    "https://app-web.pl",
+  "license":     [
+    "GPL-3.0",
+    "proprietary"
+  ],
+  "authors":     [
+    {
+      "name":  "AppWeb",
+      "email": "kontakt@app-web.pl"
+    }
+  ],
+  "extra":       {
+    "oxideshop": {
+      "target-directory": "app-web/oxid_basemodule",
+      "blacklist-filter": [
+        "documentation/**/*.*",
+        "node_modules/**/*.*"
+      ]
+    }
+  },
+  "require":     {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AppWeb\\BaseModule\\": "../../../source/modules/app-web/oxid_basemodule"
+    }
+  }
+}
+
+
