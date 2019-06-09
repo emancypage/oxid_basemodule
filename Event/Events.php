@@ -23,10 +23,12 @@ class Events
     {
         $sQuery = "CREATE TABLE `appweb_firstbasemodel` (
             `OXID` CHAR(32) NOT NULL DEFAULT '',
+            `LISTNO` INT(11) NOT NULL AUTO_INCREMENT COMMENT 'List number',
             `OXUSER` CHAR(32) CHARACTER SET 'latin1' COLLATE 'latin1_general_ci' NOT NULL DEFAULT '' COMMENT 'Shop user oxid',
             `SHOPID` INT(11) NOT NULL DEFAULT 1 COMMENT 'Shop id',
             `TIMESTAMP` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'File creation timestamp',
-            PRIMARY KEY (`OXID`)
+            PRIMARY KEY (`OXID`),
+            KEY `LISTNO` (`LISTNO`)
         );
         ";
 

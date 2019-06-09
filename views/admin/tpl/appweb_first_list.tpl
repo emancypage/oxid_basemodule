@@ -47,38 +47,12 @@
 
                 <td valign="top" class="listfilter" height="20">
                     <div class="r1"><div class="b1">
-                            <input class="listedit" type="text" size="7" maxlength="128" name="where[kiracomplaints][kiranr]" value="[{$where.kiracomplaints.kiranr}]">
+                            <input class="listedit" type="text" size="7" maxlength="128" name="where[appweb_firstbasemodel][listno]" value="[{$where.appweb_firstbasemodel.listno}]">
                         </div></div>
                 </td>
                 <td valign="top" class="listfilter" height="20">
                     <div class="r1"><div class="b1">
-                            <input class="listedit" type="text" size="50" maxlength="128" name="where[oxuser][oxusername]" value="[{$where.oxuser.oxusername}]">
-                        </div></div>
-                </td>
-                <td valign="top" class="listfilter" height="20">
-                    <div class="r1"><div class="b1">
-                            <input class="listedit" type="text" size="50" maxlength="128" name="where[oxorder][oxordernr]" value="[{$where.oxorder.oxordernr}]">
-                        </div></div>
-                </td>
-                <td valign="top" class="listfilter first" height="20">
-                    <div class="r1"><div class="b1">
-                            <select name="status" class="statusselect" onChange="document.search.submit();">
-                                <option value="-1" [{if $status == -1}]SELECTED[{/if}]style="color: #000000;">[{oxmultilang ident="ORDER_LIST_FOLDER_ALL"}]</option>
-                                <option value="0" [{if $status == 0}]SELECTED[{/if}] style="color: [{$color}];">new</option>
-                                <option value="1" [{if $status == 1}]SELECTED[{/if}] style="color: [{$color}];">accepted</option>
-                                <option value="2" [{if $status == 2}]SELECTED[{/if}] style="color: [{$color}];">rejected</option>
-                            </select>
-                        </div></div>
-                </td>
-                <td valign="top" class="listfilter" height="20">
-                    <div class="r1"><div class="b1">
-                            <input class="listedit" type="text" size="40" maxlength="128" name="where[kiracomplaints][kiracreatedat]" value="[{$where.kiracomplaints.kiracreatedat}]">
-                        </div></div>
-                </td>
-                <td valign="top" class="listfilter" height="20" colspan="2" nowrap>
-                    <div class="r1"><div class="b1">
-                            <div class="find"><input class="listedit" type="submit" name="submitit" value="[{oxmultilang ident="GENERAL_SEARCH"}]"></div>
-                            <input class="listedit" type="text" size="40" maxlength="128" name="where[kiracomplaints][kiraupdatedat]" value="[{$where.kiracomplaints.kiraupdatedat}]">
+                            <input class="listedit" type="text" size="7" maxlength="128" name="where[oxuser][oxusername]" value="[{$where.oxuser.oxusername}]">
                         </div></div>
                 </td>
                 [{/block}]
@@ -86,28 +60,12 @@
             <tr>
                 [{block name="appweb_base_admin_list_sorting"}]
                 <td class="listheader first" height="15">
-                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'kiracomplaints', 'kiranr', '[{$oView->getSortingDirection("kiranr")}]');document.search.submit();"
+                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'appweb_firstbasemodel', 'listno', 'asc');document.search.submit();"
                        class="listheader">No.</a>
                 </td>
-                <td class="listheader" height="15">
-                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'oxuser', 'oxusername', '[{$oView->getSortingDirection("oxusername")}]');document.search.submit();"
-                       class="listheader">Username</a>
-                </td>
-                <td class="listheader" height="15">
-                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'oxorder', 'oxordernr', '[{$oView->getSortingDirection("oxordernr")}]');document.search.submit();"
-                       class="listheader">Order no.</a>
-                </td>
-                <td class="listheader" height="15">
-                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'kiracomplaints', 'kirastatus', '[{$oView->getSortingDirection("kirastatus")}]');document.search.submit();"
-                       class="listheader">Status</a>
-                </td>
-                <td class="listheader" height="15">
-                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'kiracomplaints', 'kiracreatedat', '[{$oView->getSortingDirection("kiracreatedat")}]');document.search.submit();"
-                       class="listheader">Created at</a>
-                </td>
-                <td class="listheader" height="15">
-                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'kiracomplaints', 'kiraupdatedat', '[{$oView->getSortingDirection("kiraupdatedat")}]');document.search.submit();"
-                       class="listheader">Updated at</a>
+                <td class="listheader first" height="15">
+                    <a href="Javascript:top.oxid.admin.setSorting( document.search, 'oxuser', 'oxusername', 'asc');document.search.submit();"
+                       class="listheader">User</a>
                 </td>
                 [{/block}]
             </tr>
@@ -133,41 +91,12 @@
                 <td valign="top" class="[{$listclass}]" height="15">
                     <div class="listitemfloating">&nbsp;<a
                                 href="Javascript:top.oxid.admin.editThis('[{$listitem->getId()}]');"
-                                class="[{$listclass}]">[{$listitem->getComplaintNr()}]</a></div>
+                                class="[{$listclass}]">[{$listitem->getBaseModelNo()}]</a></div>
                 </td>
                 <td valign="top" class="[{$listclass}]" height="15">
                     <div class="listitemfloating">&nbsp;<a
                                 href="Javascript:top.oxid.admin.editThis('[{$listitem->getId()}]');"
                                 class="[{$listclass}]">[{$listitem->getUserName()}]</a></div>
-                </td>
-                <td valign="top" class="[{$listclass}]" height="15">
-                    <div class="listitemfloating">&nbsp;<a
-                                href="Javascript:top.oxid.admin.editThis('[{$listitem->getId()}]');"
-                                class="[{$listclass}]">[{$listitem->getOrderNr()}]</a></div>
-                </td>
-                <td valign="top" class="[{$listclass}]" height="15">
-                    <div class="listitemfloating">&nbsp;<a
-                                href="Javascript:top.oxid.admin.editThis('[{$listitem->getId()}]');"
-                                class="[{$listclass}] [{if $listitem->getStatus()== 1}]text-success[{elseif $listitem->getStatus()== 2 }]text-danger[{else}][{/if}]">[{$listitem->getStatusName()}]</a>
-                    </div>
-                </td>
-                <td valign="top" class="[{$listclass}]" height="15">
-                    <div class="listitemfloating">&nbsp;<a
-                                href="Javascript:top.oxid.admin.editThis('[{$listitem->getId()}]');"
-                                class="[{$listclass}]">[{$listitem->getCreationDate()}]</a>
-                    </div>
-                </td>
-                <td valign="top" class="[{$listclass}]" height="15">
-                    <div class="listitemfloating">&nbsp;<a
-                                href="Javascript:top.oxid.admin.editThis('[{$listitem->getId()}]');"
-                                class="[{$listclass}]">[{$listitem->getModificationDate()}]</a>
-                    </div>
-                </td>
-                <td valign="top" class="[{$listclass}]" height="15">
-                    [{if !$readonly}]
-                    <a href="Javascript:top.oxid.admin.deleteThis('[{$listitem->getId()}]');"
-                       class="delete" id="del.[{$_cnt}]" [{include file="help.tpl" helpid=item_delete}]></a>
-                    [{/if}]
                 </td>
                 [{/block}]
             </tr>

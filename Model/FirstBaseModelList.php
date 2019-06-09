@@ -9,6 +9,6 @@ class FirstBaseModelList extends ListModel
 {
     protected $_sCoreTable = 'appweb_firstbasemodel';
 
-    protected $_sObjectsInListName = \AppWeb\BaseModule\Model\FistBaseModel::class;
+    protected $_sObjectsInListName = \AppWeb\BaseModule\Model\FirstBaseModel::class;
 
 }

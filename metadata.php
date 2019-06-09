@@ -25,8 +25,10 @@ $aModule = array(
         'appweb_first_tab_main' => \AppWeb\BaseModule\Controller\Admin\FirstMainTabController::class,
     ),
     'templates' => array(
-        'app-web/oxid_basemodule/views/admin/tpl/appweb_first_submenu.tpl' => 'app-web/oxid_basemodule/views/admin/tpl/appweb_first_submenu.tpl',
         'app-web/oxid_basemodule/views/admin/tpl/appweb_first_list.tpl' => 'app-web/oxid_basemodule/views/admin/tpl/appweb_first_list.tpl',
+        'app-web/oxid_basemodule/views/admin/tpl/appweb_first_submenu.tpl' => 'app-web/oxid_basemodule/views/admin/tpl/appweb_first_submenu.tpl',
+        'app-web/oxid_basemodule/views/admin/tpl/appweb_first_list_main.tpl' => 'app-web/oxid_basemodule/views/admin/tpl/appweb_first_list_main.tpl',
+        'app-web/oxid_basemodule/views/admin/tpl/appweb_first_list_overview.tpl' => 'app-web/oxid_basemodule/views/admin/tpl/appweb_first_list_overview.tpl',
     ),
     'blocks' => array(),
     'events' => array(
