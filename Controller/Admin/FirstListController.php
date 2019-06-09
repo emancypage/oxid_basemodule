@@ -12,7 +12,7 @@ class FirstListController extends AdminListController
 
     public function render()
     {
-        parent::render();
+        return parent::render();
     }
 
     public function getSortingDirection(string $sortingField)
