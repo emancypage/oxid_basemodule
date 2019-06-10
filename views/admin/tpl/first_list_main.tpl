@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-xs-12 col-md-6">
             <label>User name: <input type="text" value="[{$edit->getUserName()}]"></label>
-            <p>Specific object view</p>
+            <p>Created: [{$edit->appweb_firstbasemodel__timestamp->value}]</p>
         </div>
     </div>
 </div>
