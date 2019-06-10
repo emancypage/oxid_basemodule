@@ -12,6 +12,13 @@ class FirstBaseModel extends BaseModel
 
     protected $_sClassName = \AppWeb\BaseModule\Model\FirstBaseModel::class;
 
+    /** {@inheritdoc} */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->init($this->_sCoreTbl);
+    }
+
     public function getBaseModelNo()
     {
         return $this->appweb_firstbasemodel__listno->value;

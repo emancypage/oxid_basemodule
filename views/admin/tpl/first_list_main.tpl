@@ -2,9 +2,9 @@
 
 [{if $readonly}]
     [{assign var="readonly" value="readonly disabled"}]
-    [{else}]
+[{else}]
     [{assign var="readonly" value=""}]
-    [{/if}]
+[{/if}]
 
 <form name="transfer" id="transfer" action="[{$oViewConf->getSelfLink()}]" method="post">
     [{$oViewConf->getHiddenSid()}]
@@ -16,7 +16,8 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <p>Specific object view</p>
+            <label>User name: <input type="text" value="[{$edit->getUserName()}]"></label>
+            <p>Created: [{$edit->appweb_firstbasemodel__timestamp->value}]</p>
         </div>
     </div>
 </div>

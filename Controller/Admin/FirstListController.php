@@ -12,7 +12,7 @@ class FirstListController extends AdminListController
 
     protected $_sListType = \AppWeb\BaseModule\Model\FirstBaseModelList::class;
 
-    protected $_sThisTemplate = 'app-web/oxid_basemodule/views/admin/tpl/appweb_first_list.tpl';
+    protected $_sThisTemplate = 'app-web/oxid_basemodule/views/admin/tpl/first_list.tpl';
 
     public function getSortingDirection(string $sortingField)
     {
